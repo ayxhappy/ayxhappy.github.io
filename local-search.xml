@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>SQL server 查看死锁</title>
+    <link href="/2024/10/28/SQL-server-%E6%9F%A5%E7%9C%8B%E6%AD%BB%E9%94%81/"/>
+    <url>/2024/10/28/SQL-server-%E6%9F%A5%E7%9C%8B%E6%AD%BB%E9%94%81/</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs n1ql"><span class="hljs-keyword">SELECT</span><br>request_session_id spid,<br>OBJECT_NAME(<br>resource_associated_entity_id<br>) tableName<br><span class="hljs-keyword">FROM</span><br>sys.dm_tran_locks<br><span class="hljs-keyword">WHERE</span><br>resource_type = <span class="hljs-string">&#x27;OBJECT&#x27;</span><br><br></code></pre></td></tr></table></figure><p>kill spid</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>测试文章</title>
     <link href="/2024/10/28/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     <url>/2024/10/28/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
